@@ -30,10 +30,6 @@ class ListAdapter(private val editClickListener: OnEditClickListener) : Recycler
         holder.itemView.findViewById<TextView>(R.id.textView3).text = currentItem.lastName
         holder.itemView.findViewById<TextView>(R.id.textView4).text = currentItem.age.toString()
 
-        // Clique no botão de editar
-        holder.itemView.findViewById<Button>(R.id.editButton).setOnClickListener {
-            editClickListener.onEditClick(currentItem)
-        }
     }
 
     fun setData(user: List<User>) {

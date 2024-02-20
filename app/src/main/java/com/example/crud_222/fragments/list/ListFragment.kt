@@ -41,8 +41,16 @@ class listFragment : Fragment(), ListAdapter.OnEditClickListener {
             findNavController().navigate(R.id.addFragment)
         }
 
+
+        view.findViewById<FloatingActionButton>(R.id.deleteButton).setOnClickListener {
+            mUserViewModel.deleteAllUsers()
+        }
+
+
         return view
     }
+
+
 
     override fun onEditClick(user: User) {
     }
